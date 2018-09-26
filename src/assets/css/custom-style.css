@@ -1,0 +1,25 @@
+:root {
+  --box-shadow: 0 0 4px #bbb;
+  --white: #fff;
+}
+
+.font-10 {
+  font-size: 10px !important;
+}
+
+.font-12 {
+  font-size: 12px !important;
+}
+
+.font-14 {
+  font-size: 14px !important;
+}
+
+.custom-navbar {
+  background-color: var(--white) !important;
+  box-shadow: var(--box-shadow);
+}
+
+.navbar-light .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.0);
+}
