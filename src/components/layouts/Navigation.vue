@@ -12,7 +12,7 @@
       <b-navbar-nav>
         <!-- Navbar dropdowns -->
         <b-nav-form class="form-search">
-          <b-input-group size="sm">
+          <b-input-group size="md">
             <b-form-input placeholder="Cari sesuatu.." class="input-search"></b-form-input>
             <b-input-group-append>
               <b-dropdown

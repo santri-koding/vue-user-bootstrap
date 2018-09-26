@@ -1,15 +1,28 @@
 <template>
   <div class="container mb-4">
+    <!-- promosi -->
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-12">
+        <h6>Promo</h6>
+      </div>
+      <div class="col-md-8 slide-big">
         <slider-content :slides="images"> </slider-content>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 slide-small">
         <div class="row">
           <div class="col-12 mb-2" v-for="image in images" :key="image.id">
             <image-content :image-source="image.imgLink" :alt="image.title"> </image-content>
           </div>
         </div>
+      </div>
+    </div>
+    <!-- Produk terbaru -->
+    <div class="row">
+      <div class="col-12">
+        <h6>Iklan Terbaru</h6>
+      </div>
+      <div class="col-12">
+        
       </div>
     </div>
   </div>
@@ -47,5 +60,25 @@ export default {
 </script>
 
 <style>
+h6 {
+  font-weight: 600;
+}
 
+.slide-big {
+  margin-right: -10px;
+}
+
+.slide-small {
+  margin-left: -10px;
+}
+
+@media (max-width: 575.98px) {
+  .slide-big {
+    margin-right: 0;
+  }
+
+  .slide-small {
+    margin-left: 0;
+  }
+}
 </style>
