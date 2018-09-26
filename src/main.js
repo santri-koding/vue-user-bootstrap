@@ -4,6 +4,7 @@ import Vue from 'vue';
 import Bootstrap from 'bootstrap-vue';
 import App from './App';
 import router from './routes';
+import store from './store';
 import AxiosPlugin from './global/axios-global';
 
 /* Bootstrap style */
@@ -20,6 +21,7 @@ Vue.use(AxiosPlugin, '$axios');
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 });
