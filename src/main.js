@@ -10,6 +10,7 @@ import AxiosPlugin from './global/axios-global';
 /* Bootstrap style */
 import 'bootstrap/dist/css/bootstrap.css'; /* eslint-disable-line */
 import 'bootstrap-vue/dist/bootstrap-vue.css'; /* eslint-disable-line */
+import './assets/sass/custom-style.scss';
 import './assets/css/custom-style.css';
 
 Vue.config.productionTip = false;
