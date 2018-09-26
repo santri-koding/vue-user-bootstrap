@@ -1,10 +1,14 @@
 <template>
-  <router-view/>
+  <p>List ads layouts</p>
 </template>
 
 <script>
 export default {
-  name: 'App',
+
 };
 
 </script>
+
+<style>
+
+</style>

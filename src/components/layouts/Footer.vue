@@ -1,10 +1,14 @@
 <template>
-  <router-view/>
+  <p>ini footer</p>
 </template>
 
 <script>
 export default {
-  name: 'App',
+
 };
 
 </script>
+
+<style>
+
+</style>

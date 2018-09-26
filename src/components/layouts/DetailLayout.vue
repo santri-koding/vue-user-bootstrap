@@ -1,10 +1,14 @@
 <template>
-  <router-view/>
+  <p>Ini detail layouts</p>  
 </template>
 
 <script>
 export default {
-  name: 'App',
+
 };
 
 </script>
+
+<style>
+
+</style>

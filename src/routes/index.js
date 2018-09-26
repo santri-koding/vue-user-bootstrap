@@ -4,13 +4,21 @@ import Router from 'vue-router';
 /* import own component */
 import Login from '@/pages/auth/Login';
 import Home from '@/pages/content/Home';
+import HomeLayout from '@/components/layouts/HomeLayout';
 
 Vue.use(Router);
 
 const homePage = {
   path: '/',
-  name: 'homepage',
-  component: Home,
+  component: HomeLayout,
+  redirect: '/',
+  children: [
+    {
+      path: '',
+      name: 'Home',
+      component: Home,
+    },
+  ],
 };
 
 const loginPage = {
