@@ -1,9 +1,11 @@
 <template>
-  <div class="container-fluid">
+  <div>
     <!-- navigation content -->
     <navigation-content />
     <!-- content data -->
-    <router-view> </router-view>
+    <div class="container mt-4">
+      <router-view> </router-view>
+    </div>
     <!-- footer content -->
     <footer-content />
   </div>
