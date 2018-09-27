@@ -19,7 +19,14 @@
     <!-- Produk terbaru -->
     <div class="row">
       <div class="col-12">
-        <h6>Iklan Terbaru</h6>
+        <div class="row">
+          <div class="col-6">
+            <h6>Iklan Terbaru</h6>
+          </div>
+          <div class="col-6">
+            <a href="" class="show-all-button">Lihat Selengkapnya</a>
+          </div>
+        </div>
       </div>
       <div class="col-12">
         <div class="row">
@@ -33,6 +40,23 @@
         </div>
       </div>
     </div>
+    <!-- alasan jualan di FJB Suara Merdeka -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h6 class="font-14">Tokopedia - Jual Beli Online Aman dan Nyaman</h6>
+        <span class="font-13">
+          Tokopedia merupakan pasar / mal online terbesar di Indonesia yang memungkinkan individu maupun pemilik usaha di Indonesia untuk membuka dan mengelola toko online mereka secara mudah dan gratis, sekaligus memberikan pengalaman berbelanja online yang lebih aman dan nyaman. Jual beli online menjadi lebih menyenangkan. Punya toko online? Buka cabang nya di Tokopedia sekarang! Gratis!
+        </span>
+        <div class="row mt-4">
+          <div class="col-md-4" v-for="reason in reasons" :key="reason.id">
+            <card-hero 
+              :image-source="reason.img_source"
+              :title="reason.title"
+              :description="reason.description"> </card-hero>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -40,12 +64,14 @@
 import SliderContent from '@/components/slider/Slider';
 import ImageContent from '@/components/widgets/ImageHomepage';
 import PostContent from '@/components/posts/Card';
+import CardHero from '@/components/widgets/CardHero';
 
 export default {
   components: {
     SliderContent,
     ImageContent,
     PostContent,
+    CardHero,
   },
   data() {
     return {
@@ -131,6 +157,26 @@ export default {
           price: '2200000',
         },
       ],
+      reasons: [
+        {
+          id: 1,
+          title: 'Transparan',
+          description: 'Jual beli online menjadi lebih menyenangkan. Punya toko online?',
+          img_source: 'https://ecs7.tokopedia.net/img/transparan-01.png',
+        },
+        {
+          id: 2,
+          title: 'Aman',
+          description: 'Jual beli online menjadi lebih menyenangkan. Punya toko online?',
+          img_source: 'https://ecs7.tokopedia.net/img/aman-02.png',
+        },
+        {
+          id: 3,
+          title: 'Gratis',
+          description: 'Jual beli online menjadi lebih menyenangkan. Punya toko online?',
+          img_source: 'https://ecs7.tokopedia.net/img/free-toped.png',
+        },
+      ],
     };
   },
 };
@@ -140,6 +186,17 @@ export default {
 <style>
 h6 {
   font-weight: 600;
+}
+
+.show-all-button {
+  font-size: 13px;
+  float: right;
+  color: var(--green);
+}
+
+.show-all-button:hover {
+  font-weight: 600;
+  color: var(--green);
 }
 
 @media (max-width: 575.98px) {

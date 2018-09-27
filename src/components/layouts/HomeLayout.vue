@@ -3,7 +3,7 @@
     <!-- navigation content -->
     <navigation-content />
     <!-- content data -->
-    <div class="container" style="margin-top: 5em">
+    <div class="container" style="margin-top: 4.5em">
       <router-view> </router-view>
     </div>
     <!-- footer content -->
