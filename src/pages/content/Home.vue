@@ -24,13 +24,13 @@
             <h6>Iklan Terbaru</h6>
           </div>
           <div class="col-6">
-            <a href="" class="show-all-button">Lihat Selengkapnya</a>
+            <a href="" class="show-all-button">Selengkapnya <i class="fa fa-caret-down"></i></a>
           </div>
         </div>
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-md-2 col-sm-4 col-xs-6" v-for="post in posts" :key="post.id">
+          <div class="col-md-2 col-sm-4 col-6 mb-2" v-for="post in posts" :key="post.id">
             <post-content
               :img-source="post.img_source"
               :title="post.title" :location="post.location"
@@ -195,7 +195,6 @@ h6 {
 }
 
 .show-all-button:hover {
-  font-weight: 600;
   color: var(--green);
 }
 

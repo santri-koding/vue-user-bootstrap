@@ -21,5 +21,12 @@ export default {
   height: 163px;
   cursor: pointer;
 }
+
+@media (max-width: 767.98px) {
+  .img-fixed {
+    width: 100%;
+    height: auto;
+  }
+}
 </style>
 
