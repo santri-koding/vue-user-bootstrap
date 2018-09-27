@@ -29,7 +29,7 @@
             <b-input-group-append>
               <select name="category" class="input-category">
                 <option value="all"> Semua Kategori </option>
-                <option 
+                <option
                   v-for="menu in menus"
                   :key="menu.id"
                   :value="menu.id"> {{ menu.name }}</option>
@@ -111,8 +111,26 @@ export default {
 }
 
 .input-search {
-  min-width: 480px;
+  width: 480px;
   border-right-color: transparent;
+}
+
+@media (max-width: 1199.98px) {
+  .input-search {
+    width: 250px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .input-search {
+    width: 230px;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .input-search {
+    width: 90px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -120,20 +138,8 @@ export default {
     padding-top: 10px;
     padding-left: 0;
   }
-}
-
-@media (max-width: 767.98px) {
-  .input-search {
-    min-width: 100%;
-  }
   .hide-on-mobile {
     display: none;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .input-search {
-    min-width: 250px;
   }
 }
 
