@@ -22,21 +22,19 @@
         <!-- Navbar dropdowns -->
         <b-nav-form class="form-search hide-on-mobile">
           <b-input-group size="md">
+            <b-input-group-prepend>
+              <b-btn class="search-icon"><i class="fa fa-search"></i></b-btn>
+            </b-input-group-prepend>
             <b-form-input placeholder="Cari sesuatu.." class="input-search"></b-form-input>
             <b-input-group-append>
-              <b-dropdown
-                size="sm"
-                text="Semua Kategori"
-                variant="outline-secondary"
-                slot="append">
-                  <b-dropdown-item
-                    href="#"
-                    v-for="menu in menus"
-                    :key="menu.id">
-                    <span class="font-14">{{ menu.name }}</span>
-                  </b-dropdown-item>
-              </b-dropdown>
-              <b-btn variant="success" size="sm">Cari</b-btn>
+              <select name="category" class="input-category">
+                <option value="all"> Semua Kategori </option>
+                <option 
+                  v-for="menu in menus"
+                  :key="menu.id"
+                  :value="menu.id"> {{ menu.name }}</option>
+              </select>
+              <b-btn variant="success" size="sm" style="width: 70px">Cari</b-btn>
             </b-input-group-append>
           </b-input-group>
         </b-nav-form>
@@ -86,12 +84,34 @@ export default {
   margin-left: 20px;
 }
 
+.search-icon {
+  color: #495057;
+  background: #fff;
+  border-left-color: #ced4da;
+  border-right-color: #fff;
+  border-top-color: #ced4da;
+  border-bottom-color: #ced4da;
+  cursor: none;
+}
+
+.input-category {
+  width: 120px;
+  font-size: 13px;
+  text-align: right;
+  cursor: pointer;
+  background: #fff;
+  border-left-color: #fff;
+  border-top-color: #ced4da;
+  border-bottom-color: #ced4da;
+  color: #495057;
+}
+
 .remove-border, .btn-outline-secondary {
   border-color: transparent !important;
 }
 
 .input-search {
-  min-width: 600px;
+  min-width: 480px;
   border-right-color: transparent;
 }
 
