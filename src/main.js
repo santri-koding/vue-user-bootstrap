@@ -7,6 +7,9 @@ import router from './routes';
 import store from './store';
 import AxiosPlugin from './global/axios-global';
 
+/* custom filter */
+import './filters/numeral';
+
 /* Bootstrap style */
 import 'bootstrap/dist/css/bootstrap.css'; /* eslint-disable-line */
 import 'bootstrap-vue/dist/bootstrap-vue.css'; /* eslint-disable-line */
