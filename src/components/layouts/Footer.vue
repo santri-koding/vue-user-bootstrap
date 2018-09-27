@@ -2,7 +2,7 @@
   <div>
     <div class="border-space"></div>
     <div class="container">
-      <div class="row mt-5">
+      <div class="row mt-5 mb-4">
         <div class="col-md-3">
           <h6>Forum Jual Beli Suara Merdeka</h6>
           <ul class="link-footer">
@@ -58,12 +58,77 @@
         </div>
       </div>
     </div>
+    <div class="border-space"></div>
+    <div class="container">
+      <div class="row mt-2 mb-2">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="https://ecs7.tokopedia.net/img/footer/toped.png" alt="" class="img-fluid img-footer">
+            </div>
+            <div class="col-md-10">
+              <div class="font-13 color-grey mt-1" style="margin-left: -35px;">
+                © {{ date }}, PT Suara Merdeka <br/>
+                Server Process Time
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="float-right">
+            <b-button-group>
+              <b-button
+                size="sm"
+                :variant="lang.id.variant"
+                :disabled="lang.id.status"
+                @click="swicthHandler(lang.id.id)">Bahasa Indonesia</b-button>
+              <b-button
+                size="sm"
+                :variant="lang.jowo.variant"
+                :disabled="lang.jowo.status"
+                @click="swicthHandler(lang.jowo.id)">Boso Jowo</b-button>
+            </b-button-group>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      date: new Date().getFullYear(),
+      lang: {
+        id: {
+          id: 'id',
+          variant: 'success',
+          status: true,
+        },
+        jowo: {
+          id: 'jowo',
+          variant: 'outline-success',
+          status: false,
+        },
+      },
+    };
+  },
+  methods: {
+    swicthHandler(value) {
+      if (value === 'id') {
+        this.lang.id.variant = 'success';
+        this.lang.id.status = true;
+        this.lang.jowo.variant = 'outline-success';
+        this.lang.jowo.status = false;
+      } else {
+        this.lang.id.variant = 'outline-success';
+        this.lang.id.status = false;
+        this.lang.jowo.variant = 'success';
+        this.lang.jowo.status = true;
+      }
+    },
+  },
 };
 
 </script>
@@ -84,6 +149,9 @@ ul a {
 
 ul li {
   line-height: 22px;
+}
+.img-footer {
+  height: 40px;
 }
 .border-space {
   border-top: 1px solid var(--grey-custom);

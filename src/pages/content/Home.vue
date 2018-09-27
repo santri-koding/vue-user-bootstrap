@@ -47,7 +47,7 @@
         <span class="font-14">Mudah, nyaman dan bebas komisi transaksi. GRATIS!</span>
         <br>
         <b-button size="md" variant="success" class="mt-2"> Buat Iklan Sekarang</b-button>
-        <a href="" style="color: var(--green); text-decoration: underline;" class="font-12">Pelajari lebih Lanjut</a>
+        <a href="" style="color: var(--green); text-decoration: underline;" class="font-12">Pelajari lebih Lanjut</a> <!-- eslint-disable-line -->
       </div>
       <div class="col-md-6">
         <img src="https://ecs7.tokopedia.net/img/shop-banner.png" alt="" class="img-fluid float-right">

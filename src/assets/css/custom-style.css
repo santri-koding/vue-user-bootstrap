@@ -34,3 +34,7 @@
 .color-orange {
   color: var(--orange) !important;
 }
+
+.color-grey {
+  color: var(--font-grey-custom) !important;
+}
