@@ -1,11 +1,11 @@
 <template>
   <b-navbar toggleable="sm" type="light" variant="info" fixed="top" class="custom-navbar">
 
-    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-
     <b-navbar-brand href="#">
       <img class="img-logo" :src="logo.source" :alt="logo.title">
     </b-navbar-brand>
+
+    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav>
