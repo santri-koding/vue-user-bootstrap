@@ -45,11 +45,11 @@
       <div class="col-12">
         <h6 class="font-14">Tokopedia - Jual Beli Online Aman dan Nyaman</h6>
         <span class="font-13">
-          Tokopedia merupakan pasar / mal online terbesar di Indonesia yang memungkinkan individu maupun pemilik usaha di Indonesia untuk membuka dan mengelola toko online mereka secara mudah dan gratis, sekaligus memberikan pengalaman berbelanja online yang lebih aman dan nyaman. Jual beli online menjadi lebih menyenangkan. Punya toko online? Buka cabang nya di Tokopedia sekarang! Gratis!
+          {{ why_fjb.description }}
         </span>
         <div class="row mt-4">
           <div class="col-md-4" v-for="reason in reasons" :key="reason.id">
-            <card-hero 
+            <card-hero
               :image-source="reason.img_source"
               :title="reason.title"
               :description="reason.description"> </card-hero>
@@ -157,6 +157,9 @@ export default {
           price: '2200000',
         },
       ],
+      why_fjb: {
+        /* eslint-disable-line */ description: `Tokopedia merupakan pasar / mal online terbesar di Indonesia yang memungkinkan individu maupun pemilik usaha di Indonesia untuk membuka dan mengelola toko online mereka secara mudah dan gratis, sekaligus memberikan pengalaman berbelanja online yang lebih aman dan nyaman. Jual beli online menjadi lebih menyenangkan. Punya toko online? Buka cabang nya di Tokopedia sekarang! Gratis!`
+      },
       reasons: [
         {
           id: 1,

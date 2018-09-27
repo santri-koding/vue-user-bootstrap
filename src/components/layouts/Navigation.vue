@@ -8,8 +8,17 @@
     </b-navbar-brand>
 
     <b-collapse is-nav id="nav_collapse">
-
       <b-navbar-nav>
+        <!-- Navbar dropdowns -->
+        <b-nav-item-dropdown text="Kategori" class="font-14">
+          <b-dropdown-item
+            href="#"
+            v-for="menu in menus"
+            :key="menu.id"><span class="font-14">{{ menu.name }}</span>
+          </b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+      <b-navbar-nav class="ml-auto">
         <!-- Navbar dropdowns -->
         <b-nav-form class="form-search hide-on-mobile">
           <b-input-group size="md">
@@ -17,16 +26,17 @@
             <b-input-group-append>
               <b-dropdown
                 size="sm"
-                text="Kategori"
+                text="Semua Kategori"
                 variant="outline-secondary"
-                slot="append"
-                class="no-outline">
+                slot="append">
                   <b-dropdown-item
                     href="#"
                     v-for="menu in menus"
-                    :key="menu.id">{{ menu.name }}</b-dropdown-item>
+                    :key="menu.id">
+                    <span class="font-14">{{ menu.name }}</span>
+                  </b-dropdown-item>
               </b-dropdown>
-              <b-btn variant="success">Cari</b-btn>
+              <b-btn variant="success" size="sm">Cari</b-btn>
             </b-input-group-append>
           </b-input-group>
         </b-nav-form>
@@ -76,17 +86,13 @@ export default {
   margin-left: 20px;
 }
 
-.no-outline {
-  outline: none !important;
+.remove-border, .btn-outline-secondary {
   border-color: transparent !important;
-}
-
-.form-search {
-  padding-left: 40px;
 }
 
 .input-search {
   min-width: 600px;
+  border-right-color: transparent;
 }
 
 @media (max-width: 575.98px) {

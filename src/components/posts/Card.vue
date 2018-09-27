@@ -19,7 +19,7 @@ export default {
   props: ['imgSource', 'title', 'price', 'user', 'location'],
   methods: {
     openDetailHandler() {
-      alert(`this ${this.title}`);
+      // alert(`this ${this.title}`);
     },
   },
 };
