@@ -1,6 +1,7 @@
 :root {
   --box-shadow: 0 0 4px #bbb;
   --white: #fff;
+  --orange: #ff5722;
 }
 
 .font-10 {
@@ -26,4 +27,8 @@
 
 .navbar-light .navbar-toggler {
   border-color: rgba(0, 0, 0, 0.0);
+}
+
+.color-orange {
+  color: var(--orange) !important;
 }

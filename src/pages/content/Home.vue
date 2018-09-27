@@ -40,6 +40,22 @@
         </div>
       </div>
     </div>
+    <!-- buat akun baru sekarang! -->
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h6 class="color-orange">Punya Toko Online? Buka cabangnya di Tokopedia</h6>
+        <span class="font-14">Mudah, nyaman dan bebas komisi transaksi. GRATIS!</span>
+        <br>
+        <b-button size="md" variant="success" class="mt-2"> Buat Iklan Sekarang</b-button>
+        <a href="" style="color: var(--green); text-decoration: underline;" class="font-12">Pelajari lebih Lanjut</a>
+      </div>
+      <div class="col-md-6">
+        <img src="https://ecs7.tokopedia.net/img/shop-banner.png" alt="" class="img-fluid float-right">
+      </div>
+      <div class="col-md-12">
+        <div style="border-bottom: 1px dashed #ccc;"> </div>
+      </div>
+    </div>
     <!-- alasan jualan di FJB Suara Merdeka -->
     <div class="row mt-5">
       <div class="col-12">
