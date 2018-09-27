@@ -11,7 +11,7 @@
 
       <b-navbar-nav>
         <!-- Navbar dropdowns -->
-        <b-nav-form class="form-search">
+        <b-nav-form class="form-search hide-on-mobile">
           <b-input-group size="md">
             <b-form-input placeholder="Cari sesuatu.." class="input-search"></b-form-input>
             <b-input-group-append>
@@ -94,9 +94,22 @@ export default {
     padding-top: 10px;
     padding-left: 0;
   }
+}
+
+@media (max-width: 767.98px) {
   .input-search {
     min-width: 100%;
   }
+  .hide-on-mobile {
+    display: none;
+  }
 }
+
+@media (max-width: 991.98px) {
+  .input-search {
+    min-width: 250px;
+  }
+}
+
 </style>
 

@@ -30,7 +30,7 @@
       </div>
       <div class="col-12">
         <div class="row">
-          <div class="col-md-2 col-sm-4 col-6 mb-2" v-for="post in posts" :key="post.id">
+          <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-2" v-for="post in posts" :key="post.id">
             <post-content
               :img-source="post.img_source"
               :title="post.title" :location="post.location"
